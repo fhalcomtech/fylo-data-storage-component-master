@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+*, *::before, *::after
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root
+{
+     font-family: 'Raleway', sans-serif;
+    --gradient1: hsl(6, 100%, 80%);
+    --gradient2: hsl(335, 100%, 65%);
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --very-dark-blue: hsl(229, 57%, 11%);
+    --width: 60vw;
+    --height: 25vh;
+    font-size: 14px;
+    --height-bar: 18px;
+}
+
+body
+{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--very-dark-blue);
+    background-image: url(/images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 50vh;
+    background-position-y: bottom ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--pale-blue) ;
+}
+
+.folio-container
+{
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+    display: flex;
+    justify-content: space-between;
+}
+.folio-menu
+{
+    width: 35%;
+    background-color: var(--dark-blue);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 1rem;
+    border-top-right-radius: 5rem;
+}
+
+.folio-menu-logo
+{
+    width: 50%;
+    height: 50%;
+}
+
+.folio-menu-logo > img
+{
+    height: 65%;
+}
+
+.folio-menu-icons
+{
+    position: relative;
+    height: 30%;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.folio-menu-icons .menu-icon-img
+{
+    width: 30%;
+    height: 100%;
+    position: relative;
+    background-color: var(--very-dark-blue);
+    border-radius: 20%;
+}
+
+.folio-menu-icons .menu-icon-img:after
+{
+    content: "";
+    padding-top: 1rem;
+}
+
+
+.menu-icon
+{
+    position: absolute;
+    top:0.5em;
+    left: 0.5em;
+
+}
+
+
+.folio-progress
+{
+position: relative;
+background-color: var(--dark-blue);
+width: 62.5%;
+height: 75%;
+border-radius: 10px;
+align-self: flex-end;
+display: flex;
+flex-direction: column;
+justify-content: center;
+font-size: 0.9rem;
+}
+
+.folio-progress > div{
+width: 80%;
+align-self: center;
+}
+
+.folio-progress > .progress-header
+{
+position: relative;
+display: flex;
+justify-content: space-between;
+margin-bottom: 1em;
+}
+
+.folio-progress > .progress-header > p > span
+{
+font-weight: 700;
+}
+
+.folio-progress > .progress-header > p:nth-child(2)
+{
+display: flex;
+position: absolute;
+background-color: var(--pale-blue);
+color: var(--very-dark-blue);
+
+border-radius: 1rem;
+right: 0;
+bottom: 0;
+padding: 1rem;
+
+align-items: center;
+}
+
+.folio-progress > .progress-header > p:nth-child(2)::after
+{
+content: "";
+display: block;
+width: 2rem;
+height: 2rem;
+position: absolute;
+top: 85%;
+right: 0;
+border-color: var(--pale-blue) var(--pale-blue) transparent transparent;
+border-width: 1rem;
+border-style: solid;
+}
+
+.folio-progress > .progress-header > p:nth-child(2) > span
+{
+display: inline-block;
+padding-right: 1rem;
+font-size: 2.5rem;
+
+}
+
+.progres-body
+{
+position: relative;
+width: 80%;
+height: var(--height-bar);
+border-radius: calc(var(--height-bar)*0.5);
+margin-top: 0.5rem;
+margin-bottom: 5px;
+background-color: var(--very-dark-blue);
+}
+
+.progres-body .progress-bar-porcent
+{
+position: absolute;
+left: calc(var(--height-bar)*0.5*0.7);
+top: 15%;
+width: 75%;
+height: 70%;
+border-radius: calc(var(--height-bar)*0.5*0.7);
+background-image: linear-gradient(90deg, var(--gradient1), var(--gradient2));
+}
+
+.progress-bar-point
+{
+position: absolute;
+height: calc(var(--height-bar)*0.6);
+width:calc(var(--height-bar)*0.6);
+border-radius: calc(var(--height-bar)*0.6*0.5);
+right: 0;
+background-color: var(--pale-blue);
+}
+
+.progress-footer p
+{
+font-weight: 700;
+display: flex;
+justify-content: space-between;
+}
+
+
